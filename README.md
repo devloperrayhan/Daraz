@@ -1,5 +1,6 @@
 # Daraz
 Master Copy Page on Daraz. This page is daraz clone page.just educational purpos made this page.
+
 Useing :
 --------
 html,css,javascript,jQuery plugin
