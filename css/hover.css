@@ -1,0 +1,31 @@
+.header-carousel:hover .owl-nav{
+    opacity: 1;
+    visibility: visible;
+}
+.Download_BTn_Qr_side a:hover i span,
+.Download_BTn_Qr_side a:hover i{
+    color: blue;
+}
+.product_img_1_card:hover{
+    box-shadow: 0px 0px 2px 0px #000000;
+}
+.Categories_items_hover:hover{
+    box-shadow: 0px 0px 2px 0px #000000;
+}
+.card_items .col-2:hover .card{
+    box-shadow: 0px 0px 3px 0px #000000;
+}
+.customer_care a:hover,
+.about_daraz a:hover,
+.country span a:hover,
+.daraz_international a:hover{
+    text-decoration: underline;
+    text-underline-offset: 1px;
+}
+.rm p a:hover{
+    color: #df0000;
+    letter-spacing: 1px;
+}
+.menu-content nav ul li a:hover{
+    color: #f5722a;
+}

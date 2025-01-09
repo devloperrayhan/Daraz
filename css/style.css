@@ -1,0 +1,703 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+body{
+  background-color: #f5f5f5;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+.card{
+  border: none;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+*{
+  box-sizing: border-box;
+}
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+span{
+    font-family: "Inter", sans-serif;
+}
+a,p{
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+}
+i{
+  font-family: 'fontawesome';
+}
+.menu nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0rem;
+}
+.menu nav ul li{
+  list-style: none;
+  margin-left: 40px;
+}
+.menu nav ul li a{
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+}
+.bg-color{
+  background-color: #f85606;
+}
+.logo img{
+  height: 50px;
+}
+.search [action] input[type="search"]{
+  height: 40px;
+  width: 100%;
+  margin-bottom: 30px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 32px;
+}
+.search [action] input[type="search"]:focus{
+  outline: transparent;
+}
+.search [action] button[type="submit"]{
+  height: 40px;
+  width: 7%;
+  border: none;
+  margin-top: 2px;
+  position: absolute;
+  right: 0px;
+  top: -2px;
+}
+.search{
+  position: relative;
+}
+.search [action] button[type="submit"] i{
+  font-size: 19px;
+  font-weight: 800;
+  color: #f85606;
+}
+.cart a{
+  text-decoration: none;
+}
+.cart a i{
+  font-size: 35px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.owl-nav {
+  font-size: 35px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -225px;
+}
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0px 9px 4px 11px !important; 
+  font: inherit;
+  z-index: 5;
+  color: #FFFFFF;
+  background-color: #575757a8;
+  border-radius: 0px 50px 50px 0px;
+}
+.owl-carousel .owl-nav button.owl-next{
+  border-radius: 50px 0px 0px 50px;
+  padding: 0px 9px 4px 11px !important;
+}
+.header-carousel .owl-nav{
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.Download{
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
+.Download .col-12 img{
+  height: 40px;
+}
+.Download .col-12 div p{
+  margin-bottom: 0rem;
+  font-size: 17px;
+  font-weight: 600;
+}
+.logo-Download-App{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Delivery-img img{
+  height: 45px;
+  margin-left: -52px;
+}
+.Delivery{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 9px;
+}
+.file-icon{
+  background-image: url("https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01tceZus1IewufOY1tZ_!!6000000000919-2-tps-364-316.png");
+  background-size: cover;
+  background-position: center;
+}
+.Hero-file-Start{
+  margin-left: 8px;
+}
+.Hero-file-Start img{
+  height: 12px;
+}
+.Hero-file-Start span{
+  font-size: 12px;
+  color: #FFFFFF;
+}
+/* .Hero-file-Start img{} */
+.Download_txt {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-top: 2px;
+}
+.Delivery-txt{
+  margin-left: -60px;
+}
+.Delivery-txt span{
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.Qr_code_img img{
+  height: 100px;
+}
+.Download_BTn_Qr_side a{
+  text-decoration: none;
+  border: 1px solid #000000;
+  padding: 1px 3px 2px 4px;
+  margin-top: 7px;
+  display: inline-block;
+  border-radius: 5px;
+}
+.Download_BTn_Qr_side :nth-child(2){
+  padding: 1px 5px 2px 5px;
+}
+.Download_BTn_Qr_side a i{
+  font-style: normal;
+  font-size: 16px;
+  color: #000000;
+  transition: all 0.3s;
+}
+.Download_BTn_Qr_side a i span{
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  margin-left: 2px;
+  margin-top: 2px;
+  color: #000000;
+  transition: all 0.3s;
+}
+.Qr_code_down_txt p{
+  font-size: 12px;
+  margin-top: 4px;
+}
+.banner_img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+.product_txt h5{
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.back_shadow{
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 4px 0px #000000;
+  margin: 0px 5px 0px 5px;
+  padding: 0rem;
+  margin-top: 3px;
+}
+.product_img [class="row"] [class="col-3"] .On_Sale_Now{
+  font-size: 15px;
+  padding: 13px 0px 0px 15px;
+  color: #f5722a;
+}
+.product_img [class="row"] [class="col-3"][style="text-align: right;"] a{
+  text-decoration: none;
+  color: #f5722a;
+  font-size: 15px;
+  padding: 5px 5px 5px 5px;
+  margin: 9px 11px 0px 0px;
+  display: inline-block;
+  border: 1px solid #f5722a;
+}
+.product_img .row{
+  padding: 0px;
+  margin: 0px;
+}
+.product_img_1_card img{
+  height: 180px;
+  width: auto;
+}
+.product_img_1_card p{
+  font-size: 15px;
+  margin-bottom: -1rem;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.product_img_1_card :nth-child(4){
+  color: #f5722a;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 15px;
+} 
+.product_img_1_card :nth-child(6){
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 15px;
+}
+.product_img_1_card{
+  margin-top: 15px;
+}
+.flash_sale a{
+  color: #000000;
+  text-decoration: none;
+}
+.flash_sale{
+  height: 327px;
+}
+.Categories_items{
+  background-color: #FFFFFF;
+}
+.Categories_items a{
+  text-decoration: none;
+  color: #000000;
+}
+.categories_img p{
+  text-align: center;
+  margin-bottom: 0rem;
+}
+.Categories_items .row{
+  margin: 0px;
+  padding: 0px;
+}
+.Categories_items_hover{
+  margin-top: 3px;
+  height: 195px;
+}
+.card_items .card img{
+  height: 197px;
+  width: 197px; 
+}
+.card_items a{
+  text-decoration: none;
+  color: #000000;
+}
+.card_items .card .card-text{
+  text-wrap: wrap;
+  overflow: hidden;
+  font-size: 13px;
+  margin-bottom: 5px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.card_items .card{
+  border-radius: 0px !important;
+}
+.card_items .card .card-body .card-text + span{
+  font-size: 25px;
+  color: #f5722a;
+}
+.card_items .card .card-body .card-text + span + span{
+  color: #999;
+}
+.star i{
+  font-size: 12px;
+  margin-right: -5px;
+}
+.star i[aria-hidden="true"]{
+  color: #FFD700;
+}
+.star i[aria-hidden="false"]{
+  color: #999999;
+}
+.star span{
+  font-size: 14px;
+  color: #999999;
+}
+.card_items .col-2{
+  margin-top: 25px;
+}
+.more button{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #1a9cb8;
+  color: #1a9cb8;
+  margin-top: 50px;
+}
+.logo_of_daraz .col-2 img{
+  height: 50px;
+  width: auto;
+}
+.logo_of_daraz .col-10 h6{
+  font-size: 16px;
+  font-weight:400;
+  color: #f5722a;
+  margin-left: 7px;
+  margin-bottom: 0rem;
+}
+.logo_of_daraz .col-10 p{
+  font-size: 15px;
+  margin-left: 7px;
+  margin-top: 1px;
+}
+.logo_of_daraz{
+  margin-top: 40px;
+}
+.payment_systems{
+  margin-top: 40px;
+}
+.customer_care p{
+  margin-bottom: 0rem;
+  color: #2b529c;
+}
+.customer_care a,
+.about_daraz a{
+  text-decoration: none;
+  color: #2b529c;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+.about_daraz P{
+  margin-bottom: 0px;
+  color: #2b529c;
+}
+.payment_methods p,
+.Verified p,
+.dbid,
+.daraz_international p,
+.follow p,
+.rm{
+  font-size: 17px;
+  padding-top: 25px;
+}
+.payment_methods img{
+  height: 30px;
+  margin-top: 7px;
+}
+.dbid span{
+  font-size: 15px;
+}
+.experience p,
+.Categories p,
+.Samsung{
+  font-size: 15px;
+  margin-top: 30px;
+  color: #5b5555;
+}
+.experience span,
+.country span,
+.Categories span,
+.Samsung span{
+  font-size: 12px;
+  margin-bottom: 0rem;
+  color: #999999;
+}
+.country{
+  margin-top: 30px;
+}
+.country span a{
+  text-decoration: none;
+  color: #2b529c;
+}
+.daraz_international img,
+.follow img{
+  height: 25px;
+  width: auto;
+}
+.follow a img{
+  margin-right: 10px;
+}
+.daraz_international a{
+  text-decoration: none;
+  color: #615f5f;
+}
+.rm p a{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: all 0.7s;
+}
+.menu-content nav{
+  position: fixed;
+  top: 700px;
+  left: 0px;
+}
+.menu-content nav ul li{
+  list-style: none;
+  border: 1px solid #FFFFFF;
+  background-color: #f5f5f5;
+}
+.menu-content nav ul{
+  padding: 0px;
+}
+.menu-content nav ul li a{
+  text-decoration: none;
+  color: #999999;
+  display: inline-block;
+  padding: 7px 8px 7px 8px;
+  transition: all 0.3s;
+}
+.menu-content nav ul li a span i{
+  font-size: 20px;
+}
