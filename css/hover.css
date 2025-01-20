@@ -29,3 +29,10 @@
 .menu-content nav ul li a:hover{
     color: #f5722a;
 }
+.details-page-menu ul li a:hover{
+    color: #dcdcdc;
+}
+.cate_gories_sub ul li a:hover{
+    background-color: #dcdcdc;
+    color: #f5722a;
+}

@@ -1,0 +1,44 @@
+.details-page-menu ul li{
+    display: inline-block;
+    list-style: none;
+    border-right: 1px solid #FFFFFFFF;
+}
+.details-page-menu ul li a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #FFFFFFFF;
+    padding-right: 5px;
+}
+.Breadcrumb-main nav ol li a{
+    color: #1a9cb7;
+    text-decoration: none;
+}
+.Breadcrumb-main{
+    margin-top: 12px;
+}
+.cate_gories a{
+    text-decoration: none;
+    display: inline-block;
+    color: #007dea;
+    padding: 10px;
+}
+.cate_gories a i{
+    margin-left: 2px;
+}
+.cate_gories_sub ul{
+    padding-left: 0rem;
+    position: absolute;
+    background-color: #FFFFFFFF;
+}
+.cate_gories_sub ul li{
+    list-style: none;
+}
+.cate_gories_sub ul li a{
+    width: 100%;
+    padding: 2px 5px;
+    font-size: 14px;
+    color: rgb(96, 97, 97);
+}
+.b_g_color{
+    background-color: #FFFFFFFF;
+}
